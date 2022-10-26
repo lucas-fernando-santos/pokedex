@@ -161,22 +161,55 @@ h1 {
 	position:fixed;
 }
 .boxPokemon {
-	background-color: red;
+	background-size: auto;
 	justify-content: center;
 	align-items: center;
 	display: flex;
 	position: absolute;
 	margin-left: 35%;
-	padding: 10px 140px;
+	padding: 129px 120px;
 	flex-direction: column;
 	margin-top:10px;
 	border-radius: 5%; 
 }
 #card-image {
-	width: 40vh;
+	margin-top: 280px;
+	width: 30vh;
+	height: 45vh;
 	z-index: 6;
+	position: absolute;
 }
 h3{
-	background-color: #666;
-	padding:20px 100%;
+	font-size: 15px;
+	margin-top: 678px;
+	color: white	;
+	position: absolute;
+	z-index: 6;	
+	font-family: 'Press Start 2P', cursive;
+}
+#pokemonType{
+	width: 400px;
+	position: absolute;
+	z-index: 1;
+	margin-top: 280px;
+	height: 320px;
+}
+.pokedexImg{
+	height: 600px;
+	width: 450px;
+	position: absolute;
+	margin-top: 350px;
+	z-index: 2;
+}
+.pokemonTypesContainer{
+	position: absolute;
+	z-index: 90;
+	display: flex;
+	width: 500px;
+	flex-direction: row;
+	margin-left: 130px;
+}
+.tipagem {
+	z-index: 200;
+	width: 40px;
 }

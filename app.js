@@ -6,12 +6,23 @@ const displayA = (id) => {
     ///1-buscar pokemon na api
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     .then(response => response.json())
-    .then(response => {    
+    .then(response => {  
+      
+            let imagetypes = ''
+            for (let index = 0; index < response.types.length; index++) {
+                imagetypes += `<img class="tipagem" src="./assets/${response.types[index].type.name}.svg" title="${response.types[index].type.name}">`
+                
+            }
+
         const accumulator = `
         <div class="boxPokemon">
-        <h3>${response.id}    |      ${response.name}</h3>
-        <img id="pokemonType" src="./assets/${response.types[0].type.name}.svg">
+        <img Class="pokedexImg" src="assets/pokedex.png" alt="">
+        <h3>${response.id}  ㅤㅤㅤㅤㅤ  ${response.name}</h3>
+        <div class="pokemonTypesContainer">
+        ${imagetypes}
+        </div>
         <img id="card-image"  alt="${response.name}" src="https://pkparaiso.com/imagenes/espada_escudo/sprites/animados-gigante/${response.name}.gif"/>
+        <img id="pokemonType" src="./assets/tipagem/${response.types[0].type.name}.png">
         <p>${response.types.map(typeIform => typeIform.type.name).join(' | ')}</p>
         </div>
         `
